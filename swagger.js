@@ -5,7 +5,7 @@ const doc = {
     title: 'CSE341 | Streaming Checker 2022',
     description: 'localhost:3000',
   },
-  host: 'cse341-ep-render.onrender.com',
+  host: 'cse341-streamingchecker-render.onrender.com',
   schemes: ['https'],
 };
 

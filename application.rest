@@ -1,0 +1,5 @@
+###
+GET https://cse341-streamingchecker-render.onrender.com/streaming  HTTP/1.1
+
+###
+GET https://cse341-streamingchecker-render.onrender.com/streaming/63352dd25131ad28635e21c1  HTTP/1.1
