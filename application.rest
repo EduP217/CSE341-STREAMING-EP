@@ -1,5 +1,47 @@
-###
-GET https://cse341-streamingchecker-render.onrender.com/streaming  HTTP/1.1
+#@host = https://cse341-streamingchecker-render.onrender.com
+@host = http://localhost:3000
 
 ###
-GET https://cse341-streamingchecker-render.onrender.com/streaming/63352dd25131ad28635e21c1  HTTP/1.1
+GET {{host}}/streaming  HTTP/1.1
+
+###
+GET {{host}}/streaming/6337dd97f6d4b3cc2d07df74  HTTP/1.1
+
+###
+POST {{host}}/streaming  HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Sony Music Entertainment Corp.",
+    "nickname": "SONY Music",
+    "event": "TikTok Live",
+    "country": "peru",
+    "date-scheduled": "2022-10-03",
+    "session": {
+        "viewers":0.5,
+        "followers":0
+    },
+    "status": "created"
+}
+
+###
+PUT {{host}}/streaming/6337e04d3c5c93a3b380e46d  HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Sony Music Entertainment Corp.",
+    "nickname": "SONY Music",
+    "event": "TikTok Live",
+    "country": "PERU",
+    "date-scheduled": "2022-10-04",
+    "session": {
+        "viewers":0,
+        "followers":0,
+        "datetime-start":"2022-10-04T14:30:00Z",
+        "datetime-end":""
+    },
+    "status": "scheduled"
+}
+
+###
+DELETE {{host}}/streaming/633838caa12286cbb401c276  HTTP/1.1

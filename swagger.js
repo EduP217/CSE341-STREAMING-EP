@@ -3,7 +3,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'CSE341 | Streaming Checker 2022',
-    description: 'localhost:3000',
+    description: 'cse341-streamingchecker-render.onrender.com',
   },
   host: 'cse341-streamingchecker-render.onrender.com',
   schemes: ['https'],

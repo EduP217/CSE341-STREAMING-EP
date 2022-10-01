@@ -1,7 +1,14 @@
-require('dotenv').config();
+require("dotenv").config();
 const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
-module.exports = 
-    mongoose.connect(process.env.MONGODB_URI)
-        .then((() => console.log("Connected to Mongo Atlas DB")))
-        .catch((err) => console.error(err));
+const conn = () => {
+  return mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+};
+
+module.exports = {
+  conn,
+};

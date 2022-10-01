@@ -1,0 +1,30 @@
+[
+    {
+        "name": "The Big Body Prophet",
+        "nickname": "BBProphet",
+        "event": "Live Streaming",
+        "country": "Lisboa",
+        "date-scheduled": "2022-09-31",
+        "session": {
+            "viewers":0,
+            "followers":0,
+            "datetime-start":"2022-09-31T08:25:12Z",
+            "datetime-end":""
+        },
+        "status": "scheduled"
+    },
+    {
+        "name": "Free Movies Channel",
+        "nickname": "FMovies",
+        "event": "Movies and Series Streaming",
+        "country": "Canada",
+        "date-scheduled": "2022-09-28",
+        "session": {
+            "viewers":125,
+            "followers":1000120,
+            "datetime-start":"2022-09-28T18:07:45Z",
+            "datetime-end":"2022-09-29T22:45:00Z"
+        },
+        "status": "finished"
+    }
+]
