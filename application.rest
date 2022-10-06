@@ -18,8 +18,10 @@ Content-Type: application/json
     "country": "peru",
     "date-scheduled": "2022-10-03",
     "session": {
-        "viewers":0.5,
-        "followers":0
+        "viewers":0,
+        "followers":0,
+        "datetime-start":"",
+        "datetime-end":""
     },
     "status": "created"
 }
