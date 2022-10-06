@@ -1,5 +1,5 @@
-#@host = https://cse341-streamingchecker-render.onrender.com
-@host = http://localhost:3000
+@host = https://cse341-streamingchecker-render.onrender.com
+#@host = http://localhost:3000
 
 ###
 GET {{host}}/streaming  HTTP/1.1

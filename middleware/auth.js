@@ -5,6 +5,6 @@ module.exports = {
     if (req.isAuthenticated()) {
       return next();
     }
-    return next(createError(500, "Authorization Invalid"));
+    return next(createError(401, "Authorization Invalid"));
   }
 };
