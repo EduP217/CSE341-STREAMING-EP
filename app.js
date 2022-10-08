@@ -9,40 +9,44 @@ const connectDB = require("./config/database");
 
 require("./config/passport")(passport);
 
-connectDB()
+connectDB();
 
 const app = express();
 
 // Logging
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'))
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
 } else {
-  app.use(morgan('tiny'))
+  app.use(morgan("tiny"));
 }
 
 app
   .use(cors())
   .use(bodyParser.urlencoded({ extended: false }))
   .use(bodyParser.json())
-  .use(session({
-    secret: 'star wars',
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({mongoUrl: process.env.MONGODB_URI,}),
-  }))
+  .use(
+    session({
+      secret: "star wars",
+      resave: false,
+      saveUninitialized: false,
+      store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }),
+    })
+  )
   .use(passport.initialize())
   .use(passport.session())
-  .use("/", require("./routes"));
+  .use("/", require("./routes"))
+//  .use("/graphql", express.json(), require("./graphQL"));
+  ;
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.send({
     error: {
       status: err.status || 500,
-      message: err.message
-    }
-  })
-})
+      message: err.message,
+    },
+  });
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, console.log(`Streamming App listening on port ${port}`));
